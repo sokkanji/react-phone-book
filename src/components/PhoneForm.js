@@ -5,11 +5,13 @@ class PhoneForm extends Component {
         name: '',
         phone: ''
     }
+
     handleChange = (e) => {
         this.setState({
             [e.target.name]: e.target.value
         });
     }
+
     handleSubmit = (e) => {
         e.preventDefault();
         this.props.onCreate(this.state);
@@ -18,6 +20,7 @@ class PhoneForm extends Component {
             phone: ''
         });
     }
+    
     render() {
         return (
             <form>
